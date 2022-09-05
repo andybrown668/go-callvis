@@ -6,6 +6,7 @@ import (
 	"go/build"
 	"go/types"
 	"path/filepath"
+	"sort"
 	"strings"
 
 	"golang.org/x/tools/go/callgraph"
@@ -140,7 +141,7 @@ func printOutput(
 	}
 
 	count := 0
-	err := callgraph.GraphVisitEdges(cg, func(edge *callgraph.Edge) error {
+	err := graphVisitEdges(cg, func(edge *callgraph.Edge) error {
 		count++
 
 		caller := edge.Caller
@@ -408,8 +409,14 @@ func printOutput(
 		return nil, err
 	}
 
-	// get edges form edgeMap
-	for _, e := range edgeMap {
+	// get edges from edgeMap in key-sorted order
+	var sortedKeys []string
+	for k := range edgeMap {
+		sortedKeys = append(sortedKeys, k)
+	}
+	sort.Strings(sortedKeys)
+	for _, k := range sortedKeys {
+		e := edgeMap[k]
 		e.From.Attrs["tooltip"] = fmt.Sprintf(
 			"%s\n%s",
 			e.From.Attrs["tooltip"],
@@ -445,4 +452,46 @@ func printOutput(
 	}
 
 	return buf.Bytes(), nil
+}
+
+// blatant copy of from GraphVisitEdges go/callgraph/util.go
+// because we want the edges in name sorted order
+func graphVisitEdges(g *callgraph.Graph, edge func(edge *callgraph.Edge) error) error {
+	// GraphVisitEdges visits all the edges in graph g in depth-first order.
+	// The edge function is called for each edge in postorder.  If it
+	// returns non-nil, visitation stops and GraphVisitEdges returns that
+	// value.
+	seen := make(map[*callgraph.Node]bool)
+	var visit func(n *callgraph.Node) error
+	visit = func(n *callgraph.Node) error {
+		if !seen[n] {
+			seen[n] = true
+			for _, e := range n.Out {
+				if err := visit(e.Callee); err != nil {
+					return err
+				}
+				if err := edge(e); err != nil {
+					return err
+				}
+			}
+		}
+		return nil
+	}
+	// key-sorted order
+	var sortedKeys []*ssa.Function
+	for k := range g.Nodes {
+		sortedKeys = append(sortedKeys, k)
+	}
+	sort.Slice(sortedKeys, func(i, j int) bool {
+		return sortedKeys[i].String() < sortedKeys[j].String()
+	})
+
+	for _, k := range sortedKeys {
+		n := g.Nodes[k]
+		if err := visit(n); err != nil {
+			return err
+		}
+	}
+	return nil
+
 }

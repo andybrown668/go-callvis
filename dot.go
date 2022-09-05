@@ -8,6 +8,7 @@ import (
     "os"
     "os/exec"
     "path/filepath"
+    "sort"
     "strings"
     "text/template"
 )
@@ -104,11 +105,17 @@ type dotEdge struct {
 type dotAttrs map[string]string
 
 func (p dotAttrs) List() []string {
-    l := []string{}
-    for k, v := range p {
-        l = append(l, fmt.Sprintf("%s=%q", k, v))
-    }
-    return l
+	l := []string{}
+	// use sorted keys to make the final dot output invariant
+	var sortedKeys []string
+	for k := range p {
+		sortedKeys = append(sortedKeys, k)
+	}
+	sort.Strings(sortedKeys)
+	for _, k := range sortedKeys {
+		l = append(l, fmt.Sprintf("%s=%q", k, p[k]))
+	}
+	return l
 }
 
 func (p dotAttrs) String() string {

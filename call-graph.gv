@@ -1,0 +1,148 @@
+digraph gocallvis {
+    label="github.com/ofabry/go-callvis";
+    labeljust="l";
+    fontname="Arial";
+    fontsize="14";
+    rankdir="LR";
+    bgcolor="lightgray";
+    style="solid";
+    penwidth="0.5";
+    pad="0.0";
+    nodesep="0.35";
+
+    node [shape="box" style="filled,rounded" fillcolor="honeydew" fontname="Verdana" penwidth="1.0" margin="0.05,0.0"];
+    edge [minlen="2"]
+
+    subgraph "cluster_focus" {
+        bgcolor="#e6ecfa";
+fontsize="18";
+label="main";
+labeljust="c";
+labelloc="t";
+        
+        "github.com/ofabry/go-callvis.copyFile" [ fillcolor="lightblue" label="copyFile" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.copyFile | defined in analysis.go:353" ]
+        "github.com/ofabry/go-callvis.mainPackages" [ fillcolor="lightblue" label="mainPackages" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.mainPackages | defined in analysis.go:50" ]
+        "github.com/ofabry/go-callvis.pathExists" [ fillcolor="lightblue" label="pathExists" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.pathExists | defined in analysis.go:342" ]
+        "github.com/ofabry/go-callvis.printOutput" [ fillcolor="lightblue" label="printOutput" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.printOutput | defined in output.go:25\nat output.go:47: calling [github.com/ofabry/go-callvis.NewDotCluster]\nat output.go:144: calling [github.com/ofabry/go-callvis.graphVisitEdges]\nat output.go:70: calling [github.com/ofabry/go-callvis.logf]\nat output.go:71: calling [github.com/ofabry/go-callvis.logf]\nat output.go:72: calling [github.com/ofabry/go-callvis.logf]\nat output.go:73: calling [github.com/ofabry/go-callvis.logf]\nat output.go:428: calling [github.com/ofabry/go-callvis.logf]\nat output.go:450: calling [(*github.com/ofabry/go-callvis.dotGraph).WriteDot]" ]
+        "github.com/ofabry/go-callvis.NewDotCluster" [ fillcolor="lightblue" label="NewDotCluster" penwidth="1.5" tooltip="github.com/ofabry/go-callvis.NewDotCluster | defined in dot.go:75" ]
+        "github.com/ofabry/go-callvis.logf" [ fillcolor="lightblue" label="logf" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.logf | defined in main.go:65" ]
+        "github.com/ofabry/go-callvis.graphVisitEdges$1" [ fillcolor="lightblue" label="graphVisitEdges$1" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.graphVisitEdges$1 | defined in output.go:466\nat output.go:470: calling [github.com/ofabry/go-callvis.graphVisitEdges$1]\nat output.go:473: calling [github.com/ofabry/go-callvis.printOutput$6]" ]
+        "github.com/ofabry/go-callvis.printOutput$6" [ fillcolor="lightblue" label="printOutput$6" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$6 | defined in output.go:144\nat output.go:166: calling [github.com/ofabry/go-callvis.printOutput$1]\nat output.go:177: calling [github.com/ofabry/go-callvis.printOutput$1]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:166: calling [github.com/ofabry/go-callvis.printOutput$5]\nat output.go:177: calling [github.com/ofabry/go-callvis.printOutput$5]\nat output.go:172: calling [github.com/ofabry/go-callvis.inStd]\nat output.go:172: calling [github.com/ofabry/go-callvis.inStd]\nat output.go:157: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:185: calling [github.com/ofabry/go-callvis.logf]\nat output.go:208: calling [github.com/ofabry/go-callvis.logf]\nat output.go:193: calling [github.com/ofabry/go-callvis.logf]\nat output.go:200: calling [github.com/ofabry/go-callvis.logf]\nat output.go:350: calling [github.com/ofabry/go-callvis.printOutput$6$1]\nat output.go:351: calling [github.com/ofabry/go-callvis.printOutput$6$1]" ]
+        "github.com/ofabry/go-callvis.isSynthetic" [ fillcolor="lightblue" label="isSynthetic" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.isSynthetic | defined in output.go:16" ]
+        "github.com/ofabry/go-callvis.printOutput$1" [ fillcolor="lightblue" label="printOutput$1" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$1 | defined in output.go:75\nat output.go:84: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:91: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:98: calling [github.com/ofabry/go-callvis.logf]" ]
+        "github.com/ofabry/go-callvis.printOutput$5" [ fillcolor="lightblue" label="printOutput$5" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$5 | defined in output.go:134" ]
+        "github.com/ofabry/go-callvis.inStd" [ fillcolor="lightblue" label="inStd" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.inStd | defined in output.go:20" ]
+        "github.com/ofabry/go-callvis.printOutput$2" [ fillcolor="lightblue" label="printOutput$2" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$2 | defined in output.go:104" ]
+        "github.com/ofabry/go-callvis.printOutput$3" [ fillcolor="lightblue" label="printOutput$3" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$3 | defined in output.go:114" ]
+        "github.com/ofabry/go-callvis.printOutput$4" [ fillcolor="lightblue" label="printOutput$4" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$4 | defined in output.go:124" ]
+        "github.com/ofabry/go-callvis.printOutput$6$1" [ fillcolor="lightblue" label="printOutput$6$1" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$6$1 | defined in output.go:210" ]
+        "github.com/ofabry/go-callvis.graphVisitEdges" [ fillcolor="lightblue" label="graphVisitEdges" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.graphVisitEdges | defined in output.go:459\nat output.go:491: calling [github.com/ofabry/go-callvis.graphVisitEdges$1]" ]
+        "github.com/ofabry/go-callvis.handler" [ fillcolor="lightblue" label="handler" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.handler | defined in handler.go:10\nat handler.go:53: calling [github.com/ofabry/go-callvis.dotToImage]\nat handler.go:16: calling [github.com/ofabry/go-callvis.logf]\nat handler.go:17: calling [github.com/ofabry/go-callvis.logf]\nat handler.go:18: calling [github.com/ofabry/go-callvis.logf]\nat handler.go:59: calling [(*github.com/ofabry/go-callvis.analysis).CacheImg]\nat handler.go:27: calling [(*github.com/ofabry/go-callvis.analysis).FindCachedImg]\nat handler.go:21: calling [(*github.com/ofabry/go-callvis.analysis).OptsSetup]\nat handler.go:24: calling [(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP]\nat handler.go:34: calling [(*github.com/ofabry/go-callvis.analysis).ProcessListArgs]\nat handler.go:39: calling [(*github.com/ofabry/go-callvis.analysis).Render]" ]
+        "github.com/ofabry/go-callvis.dotToImage" [ fillcolor="lightblue" label="dotToImage" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.dotToImage | defined in dot.go:155\nat dot.go:160: calling [github.com/ofabry/go-callvis.runDotToImage]\nat dot.go:157: calling [github.com/ofabry/go-callvis.runDotToImageCallSystemGraphviz]" ]
+        "github.com/ofabry/go-callvis.runDotToImageCallSystemGraphviz" [ fillcolor="lightblue" label="runDotToImageCallSystemGraphviz" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.runDotToImageCallSystemGraphviz | defined in dot.go:168" ]
+        "github.com/ofabry/go-callvis.runDotToImage" [ fillcolor="lightblue" label="runDotToImage" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.runDotToImage | defined in dot_cgo.go:15\nat dot_cgo.go:21: calling [github.com/ofabry/go-callvis.runDotToImage$1]" ]
+        "github.com/ofabry/go-callvis.runDotToImage$1" [ fillcolor="lightblue" label="runDotToImage$1" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.runDotToImage$1 | defined in dot_cgo.go:21" ]
+        "github.com/ofabry/go-callvis.main" [ fillcolor="lightblue" label="main" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.main | defined in main.go:122\nat main.go:154: calling [github.com/ofabry/go-callvis.openBrowser]\nat main.go:126: calling [github.com/ofabry/go-callvis.Version]\nat main.go:163: calling [github.com/ofabry/go-callvis.outputDot]\nat main.go:142: calling [github.com/ofabry/go-callvis.parseHTTPAddr]\nat main.go:145: calling [(*github.com/ofabry/go-callvis.analysis).DoAnalysis]" ]
+        "github.com/ofabry/go-callvis.Version" [ fillcolor="lightblue" label="Version" penwidth="1.5" tooltip="github.com/ofabry/go-callvis.Version | defined in version.go:12" ]
+        "github.com/ofabry/go-callvis.parseHTTPAddr" [ fillcolor="lightblue" label="parseHTTPAddr" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.parseHTTPAddr | defined in main.go:71" ]
+        "github.com/ofabry/go-callvis.outputDot" [ fillcolor="lightblue" label="outputDot" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.outputDot | defined in main.go:93\nat main.go:115: calling [github.com/ofabry/go-callvis.dotToImage]\nat main.go:95: calling [(*github.com/ofabry/go-callvis.analysis).OptsSetup]\nat main.go:97: calling [(*github.com/ofabry/go-callvis.analysis).ProcessListArgs]\nat main.go:101: calling [(*github.com/ofabry/go-callvis.analysis).Render]" ]
+        "github.com/ofabry/go-callvis.openBrowser" [ fillcolor="lightblue" label="openBrowser" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.openBrowser | defined in main.go:86" ]
+        
+        subgraph "cluster_*github.com/ofabry/go-callvis.analysis" {
+        fillcolor="lightsteelblue";
+fontcolor="#222222";
+fontsize="15";
+label="(*analysis)";
+labelloc="b";
+penwidth="0.5";
+style="rounded,filled";
+tooltip="type: *github.com/ofabry/go-callvis.analysis";
+        
+        "(*github.com/ofabry/go-callvis.analysis).CacheImg" [ fillcolor="lightblue" label="CacheImg" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).CacheImg | defined in analysis.go:315\nat analysis.go:334: calling [github.com/ofabry/go-callvis.copyFile]" ]
+        "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" [ fillcolor="lightblue" label="DoAnalysis" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).DoAnalysis | defined in analysis.go:74\nat analysis.go:109: calling [github.com/ofabry/go-callvis.mainPackages]\nat analysis.go:120: calling [github.com/ofabry/go-callvis.mainPackages]" ]
+        "(*github.com/ofabry/go-callvis.analysis).FindCachedImg" [ fillcolor="lightblue" label="FindCachedImg" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).FindCachedImg | defined in analysis.go:294\nat analysis.go:306: calling [github.com/ofabry/go-callvis.pathExists]" ]
+        "(*github.com/ofabry/go-callvis.analysis).Render" [ fillcolor="lightblue" label="Render" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).Render | defined in analysis.go:239\nat analysis.go:272: calling [github.com/ofabry/go-callvis.logf]\nat analysis.go:275: calling [github.com/ofabry/go-callvis.printOutput]" ]
+        "(*github.com/ofabry/go-callvis.analysis).OptsSetup" [ fillcolor="lightblue" label="OptsSetup" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).OptsSetup | defined in analysis.go:147" ]
+        "(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP" [ fillcolor="lightblue" label="OverrideByHTTP" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP | defined in analysis.go:207" ]
+        "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" [ fillcolor="lightblue" label="ProcessListArgs" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).ProcessListArgs | defined in analysis.go:160" ]
+        
+    }
+
+        subgraph "cluster_*github.com/ofabry/go-callvis.dotGraph" {
+        fillcolor="lightsteelblue";
+fontcolor="#222222";
+fontsize="15";
+label="(*dotGraph)";
+labelloc="b";
+penwidth="0.5";
+style="rounded,filled";
+tooltip="type: *github.com/ofabry/go-callvis.dotGraph";
+        
+        "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" [ fillcolor="lightblue" label="WriteDot" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.dotGraph).WriteDot | defined in dot.go:140" ]
+        
+    }
+
+        subgraph "cluster_github.com/ofabry/go-callvis.dotAttrs" {
+        fillcolor="lightsteelblue";
+fontcolor="#222222";
+fontsize="15";
+label="(dotAttrs)";
+labelloc="b";
+penwidth="0.5";
+style="rounded,filled";
+tooltip="type: github.com/ofabry/go-callvis.dotAttrs";
+        
+        "(github.com/ofabry/go-callvis.dotAttrs).String" [ fillcolor="lightblue" label="String" penwidth="1.5" tooltip="(github.com/ofabry/go-callvis.dotAttrs).String | defined in dot.go:121\nat dot.go:122: calling [(github.com/ofabry/go-callvis.dotAttrs).List]" ]
+        "(github.com/ofabry/go-callvis.dotAttrs).List" [ fillcolor="lightblue" label="List" penwidth="1.5" tooltip="(github.com/ofabry/go-callvis.dotAttrs).List | defined in dot.go:107" ]
+        "(github.com/ofabry/go-callvis.dotAttrs).Lines" [ fillcolor="lightblue" label="Lines" penwidth="1.5" tooltip="(github.com/ofabry/go-callvis.dotAttrs).Lines | defined in dot.go:125\nat dot.go:126: calling [(github.com/ofabry/go-callvis.dotAttrs).List]" ]
+        
+    }
+
+    }
+
+    "(*github.com/ofabry/go-callvis.analysis).CacheImg" -> "github.com/ofabry/go-callvis.copyFile" [ tooltip="at analysis.go:334: calling [github.com/ofabry/go-callvis.copyFile]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "github.com/ofabry/go-callvis.mainPackages" [ tooltip="at analysis.go:109: calling [github.com/ofabry/go-callvis.mainPackages]\nat analysis.go:120: calling [github.com/ofabry/go-callvis.mainPackages]" ]
+    "(*github.com/ofabry/go-callvis.analysis).FindCachedImg" -> "github.com/ofabry/go-callvis.pathExists" [ tooltip="at analysis.go:306: calling [github.com/ofabry/go-callvis.pathExists]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at analysis.go:272: calling [github.com/ofabry/go-callvis.logf]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "github.com/ofabry/go-callvis.printOutput" [ tooltip="at analysis.go:275: calling [github.com/ofabry/go-callvis.printOutput]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).Lines" -> "(github.com/ofabry/go-callvis.dotAttrs).List" [ tooltip="at dot.go:126: calling [(github.com/ofabry/go-callvis.dotAttrs).List]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).String" -> "(github.com/ofabry/go-callvis.dotAttrs).List" [ tooltip="at dot.go:122: calling [(github.com/ofabry/go-callvis.dotAttrs).List]" ]
+    "github.com/ofabry/go-callvis.dotToImage" -> "github.com/ofabry/go-callvis.runDotToImage" [ tooltip="at dot.go:160: calling [github.com/ofabry/go-callvis.runDotToImage]" ]
+    "github.com/ofabry/go-callvis.dotToImage" -> "github.com/ofabry/go-callvis.runDotToImageCallSystemGraphviz" [ tooltip="at dot.go:157: calling [github.com/ofabry/go-callvis.runDotToImageCallSystemGraphviz]" ]
+    "github.com/ofabry/go-callvis.graphVisitEdges" -> "github.com/ofabry/go-callvis.graphVisitEdges$1" [ style="dashed" tooltip="at output.go:491: calling [github.com/ofabry/go-callvis.graphVisitEdges$1]" ]
+    "github.com/ofabry/go-callvis.graphVisitEdges$1" -> "github.com/ofabry/go-callvis.graphVisitEdges$1" [ style="dashed" tooltip="at output.go:470: calling [github.com/ofabry/go-callvis.graphVisitEdges$1]" ]
+    "github.com/ofabry/go-callvis.graphVisitEdges$1" -> "github.com/ofabry/go-callvis.printOutput$6" [ style="dashed" tooltip="at output.go:473: calling [github.com/ofabry/go-callvis.printOutput$6]" ]
+    "github.com/ofabry/go-callvis.handler" -> "github.com/ofabry/go-callvis.dotToImage" [ tooltip="at handler.go:53: calling [github.com/ofabry/go-callvis.dotToImage]" ]
+    "github.com/ofabry/go-callvis.handler" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at handler.go:16: calling [github.com/ofabry/go-callvis.logf]\nat handler.go:17: calling [github.com/ofabry/go-callvis.logf]\nat handler.go:18: calling [github.com/ofabry/go-callvis.logf]" ]
+    "github.com/ofabry/go-callvis.handler" -> "(*github.com/ofabry/go-callvis.analysis).CacheImg" [ tooltip="at handler.go:59: calling [(*github.com/ofabry/go-callvis.analysis).CacheImg]" ]
+    "github.com/ofabry/go-callvis.handler" -> "(*github.com/ofabry/go-callvis.analysis).FindCachedImg" [ tooltip="at handler.go:27: calling [(*github.com/ofabry/go-callvis.analysis).FindCachedImg]" ]
+    "github.com/ofabry/go-callvis.handler" -> "(*github.com/ofabry/go-callvis.analysis).OptsSetup" [ tooltip="at handler.go:21: calling [(*github.com/ofabry/go-callvis.analysis).OptsSetup]" ]
+    "github.com/ofabry/go-callvis.handler" -> "(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP" [ tooltip="at handler.go:24: calling [(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP]" ]
+    "github.com/ofabry/go-callvis.handler" -> "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" [ tooltip="at handler.go:34: calling [(*github.com/ofabry/go-callvis.analysis).ProcessListArgs]" ]
+    "github.com/ofabry/go-callvis.handler" -> "(*github.com/ofabry/go-callvis.analysis).Render" [ tooltip="at handler.go:39: calling [(*github.com/ofabry/go-callvis.analysis).Render]" ]
+    "github.com/ofabry/go-callvis.main" -> "github.com/ofabry/go-callvis.openBrowser" [ arrowhead="normalnoneodot" tooltip="at main.go:154: calling [github.com/ofabry/go-callvis.openBrowser]" ]
+    "github.com/ofabry/go-callvis.main" -> "github.com/ofabry/go-callvis.Version" [ tooltip="at main.go:126: calling [github.com/ofabry/go-callvis.Version]" ]
+    "github.com/ofabry/go-callvis.main" -> "github.com/ofabry/go-callvis.outputDot" [ tooltip="at main.go:163: calling [github.com/ofabry/go-callvis.outputDot]" ]
+    "github.com/ofabry/go-callvis.main" -> "github.com/ofabry/go-callvis.parseHTTPAddr" [ tooltip="at main.go:142: calling [github.com/ofabry/go-callvis.parseHTTPAddr]" ]
+    "github.com/ofabry/go-callvis.main" -> "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" [ tooltip="at main.go:145: calling [(*github.com/ofabry/go-callvis.analysis).DoAnalysis]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "github.com/ofabry/go-callvis.dotToImage" [ tooltip="at main.go:115: calling [github.com/ofabry/go-callvis.dotToImage]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "(*github.com/ofabry/go-callvis.analysis).OptsSetup" [ tooltip="at main.go:95: calling [(*github.com/ofabry/go-callvis.analysis).OptsSetup]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" [ tooltip="at main.go:97: calling [(*github.com/ofabry/go-callvis.analysis).ProcessListArgs]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "(*github.com/ofabry/go-callvis.analysis).Render" [ tooltip="at main.go:101: calling [(*github.com/ofabry/go-callvis.analysis).Render]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "github.com/ofabry/go-callvis.NewDotCluster" [ tooltip="at output.go:47: calling [github.com/ofabry/go-callvis.NewDotCluster]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "github.com/ofabry/go-callvis.graphVisitEdges" [ tooltip="at output.go:144: calling [github.com/ofabry/go-callvis.graphVisitEdges]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at output.go:70: calling [github.com/ofabry/go-callvis.logf]\nat output.go:71: calling [github.com/ofabry/go-callvis.logf]\nat output.go:72: calling [github.com/ofabry/go-callvis.logf]\nat output.go:73: calling [github.com/ofabry/go-callvis.logf]\nat output.go:428: calling [github.com/ofabry/go-callvis.logf]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" [ tooltip="at output.go:450: calling [(*github.com/ofabry/go-callvis.dotGraph).WriteDot]" ]
+    "github.com/ofabry/go-callvis.printOutput$1" -> "github.com/ofabry/go-callvis.isSynthetic" [ tooltip="at output.go:84: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:91: calling [github.com/ofabry/go-callvis.isSynthetic]" ]
+    "github.com/ofabry/go-callvis.printOutput$1" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at output.go:98: calling [github.com/ofabry/go-callvis.logf]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$1" [ style="dashed" tooltip="at output.go:166: calling [github.com/ofabry/go-callvis.printOutput$1]\nat output.go:177: calling [github.com/ofabry/go-callvis.printOutput$1]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$2" [ style="dashed" tooltip="at output.go:184: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$2]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$3" [ style="dashed" tooltip="at output.go:184: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$3]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$4" [ style="dashed" tooltip="at output.go:184: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:184: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:192: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:199: calling [github.com/ofabry/go-callvis.printOutput$4]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$5" [ style="dashed" tooltip="at output.go:166: calling [github.com/ofabry/go-callvis.printOutput$5]\nat output.go:177: calling [github.com/ofabry/go-callvis.printOutput$5]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.inStd" [ tooltip="at output.go:172: calling [github.com/ofabry/go-callvis.inStd]\nat output.go:172: calling [github.com/ofabry/go-callvis.inStd]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.isSynthetic" [ tooltip="at output.go:157: calling [github.com/ofabry/go-callvis.isSynthetic]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at output.go:185: calling [github.com/ofabry/go-callvis.logf]\nat output.go:208: calling [github.com/ofabry/go-callvis.logf]\nat output.go:193: calling [github.com/ofabry/go-callvis.logf]\nat output.go:200: calling [github.com/ofabry/go-callvis.logf]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$6$1" [ tooltip="at output.go:350: calling [github.com/ofabry/go-callvis.printOutput$6$1]\nat output.go:351: calling [github.com/ofabry/go-callvis.printOutput$6$1]" ]
+    "github.com/ofabry/go-callvis.runDotToImage" -> "github.com/ofabry/go-callvis.runDotToImage$1" [ arrowhead="normalnoneodiamond" tooltip="at dot_cgo.go:21: calling [github.com/ofabry/go-callvis.runDotToImage$1]" ]
+}

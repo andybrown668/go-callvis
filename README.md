@@ -28,6 +28,9 @@ the code much higher or when you are just simply trying to understand code of so
 - ignore funcs from standard library
 - omit various types of function calls
 
+### output for this repo
+![call-graph](call-graph.svg)
+
 ### Output preview
 
 [![main](images/main.png)](https://raw.githubusercontent.com/ofabry/go-callvis/master/images/main.png)
